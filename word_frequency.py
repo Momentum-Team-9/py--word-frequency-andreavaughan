@@ -15,7 +15,6 @@ def print_word_freq(file):
             return new_string.join(x)
         
         stringed_lines = list_to_string(lines).lower().replace("\n", " ")
-        print(stringed_lines)
 
         def remove_punc(x):
             letters_and_space = "abcdefghijklmnopqrstuvwxyz "
@@ -27,6 +26,15 @@ def print_word_freq(file):
 
         no_punc = remove_punc(stringed_lines)
         print(no_punc)
+
+        def remove_stop_words(text):
+            list_of_text = text.split(" ")
+            print(list_of_text)
+            return [word for word in list_of_text if word not in STOP_WORDS]
+        
+        no_stops = remove_stop_words(no_punc)
+        print(no_stops)
+
 
 
 
