@@ -5,23 +5,28 @@ STOP_WORDS = [
 ]
 
 
-#def remove_punc(text):
+def remove_punc(text):
+    te
     #turn list into one long string, make 
     # lowercase using .lower, and remove punc 
     # by looping through string and comparing to all_letters
 
 
-def list_to_string(list):
-    new_string = ""
-    return new_string.join(list)
+
 
 
 def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
     with open(file) as poem:
         lines = poem.readlines()
-        list_to_string(lines)
-        print(list_to_string(lines))
+
+        def list_to_string(x):
+            new_string = ""
+            return new_string.join(x)
+        
+        stringed_lines = list_to_string(lines)
+        print(stringed_lines)
+
 
 
 if __name__ == "__main__":
