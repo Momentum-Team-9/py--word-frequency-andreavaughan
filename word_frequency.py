@@ -35,7 +35,8 @@ def print_word_freq(file):
         no_stops = remove_stop_words(no_punc)
 
         poem_dict = Counter(no_stops)
-        print(poem_dict)
+        for word, count in poem_dict.items():
+            print(f'{word:2} | {count:2}')
 
 
 
