@@ -1,3 +1,5 @@
+from collections import Counter
+
 STOP_WORDS = [
     'a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'he',
     'i', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'were',
@@ -25,15 +27,15 @@ def print_word_freq(file):
             return no_punc
 
         no_punc = remove_punc(stringed_lines)
-        print(no_punc)
 
         def remove_stop_words(text):
             list_of_text = text.split(" ")
-            print(list_of_text)
             return [word for word in list_of_text if word not in STOP_WORDS]
         
         no_stops = remove_stop_words(no_punc)
-        print(no_stops)
+
+        poem_dict = Counter(no_stops)
+        print(poem_dict)
 
 
 
